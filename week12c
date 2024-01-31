@@ -1,0 +1,25 @@
+import javax.swing.*;
+
+ public class JTableExample extends JFrame
+ {
+ 
+     JFrame f;
+ public JTableExample()
+ {
+ f=new JFrame();
+ String data[][]={ {"101","radha","50000"},
+ {"102","raju","70000"},
+ {"103","ramu","90000"}};
+ String column[]={"ID","NAME","SALARY"};
+ JTable j=new JTable(data,column);
+ JScrollPane p=new JScrollPane(j);
+ f.add(p);
+ f.setSize(300,400);
+ f.setVisible(true);
+ f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ }
+ public static void main(String[] args)
+ {
+ new JTableExample();
+ }
+ }
