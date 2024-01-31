@@ -1,0 +1,32 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class JScrollPaneExample extends JFrame
+{
+    public JScrollPaneExample()
+    {
+        JFrame f =new JFrame();
+        JPanel p=new JPanel() ;
+        
+        GridLayout g=new GridLayout(20,20);
+        p.setLayout(g);
+        for(int i=1;i<=20;i++)
+        {
+            for(int j=1;j<=20;j++)
+            {
+                JButton b=new JButton("Button"+j);
+                p.add(b);
+            }
+        }
+        JScrollPane j=new JScrollPane(p);
+        add(j,BorderLayout.CENTER);
+        setSize(300,300);
+        setTitle("JScrollPaneExample");
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    public static void main(String args[])
+    {
+        new JScrollPaneExample();
+    }
+}
