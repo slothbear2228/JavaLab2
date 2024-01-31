@@ -1,0 +1,30 @@
+import javax.swing.*;
+
+ public class JListExample extends JFrame
+ {
+     public JListExample()
+     {
+         DefaultListModel d=new DefaultListModel();
+         d.addElement("Monday");
+         d.addElement("Tuesday");
+         d.addElement("Wednesday");
+         d.addElement("Thursday");
+         d.addElement("Friday");
+         d.addElement("Saturday");
+         d.addElement("Sunday");
+         JList l=new JList(d);
+         l.setBounds(100,100,200,200);
+         add(l);
+         setSize(300,300);
+         setTitle("JListExample");
+         setLayout(null);
+         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         setVisible(true);
+     }
+     public static void main(String args[])
+     {
+         new JListExample();
+     }
+ }
+         
+ 
