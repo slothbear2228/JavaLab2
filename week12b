@@ -1,0 +1,39 @@
+
+import javax.swing.*;
+import javax.swing.tree.*;
+
+public class JTreeExample extends JFrame
+{
+    DefaultMutableTreeNode style=new DefaultMutableTreeNode("Style");{
+    
+    DefaultMutableTreeNode color=new DefaultMutableTreeNode("color");
+    
+    DefaultMutableTreeNode font=new DefaultMutableTreeNode("font");
+    
+    DefaultMutableTreeNode red=new DefaultMutableTreeNode("Red");
+    
+    DefaultMutableTreeNode green=new DefaultMutableTreeNode("Green");
+    
+    DefaultMutableTreeNode blue=new DefaultMutableTreeNode("Blue");
+    
+    
+    style.add(color);
+    style.add(font);
+    color.add(red);
+    color.add(green);
+    color.add(blue);
+    
+    JTree t=new JTree(style);
+    setSize(300,300);
+    t.setBounds(100,100,200,200);
+    add(t);
+    setTitle("JTreeExample");
+    setLayout(null);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    setVisible(true);
+    }
+    public static void main(String args[])
+    {
+        new JTreeExample();
+    }
+}
