@@ -1,0 +1,41 @@
+
+package week1a;
+import java.util.Scanner;
+
+public class Week1a {
+
+    
+    public static void main(String[] args) {
+
+  
+        Scanner scn=new Scanner(System.in);
+        System.out.print("Enter the value of a:");
+        int a=scn.nextInt();
+        System.out.print("Enter the value of b:");
+        int b=scn.nextInt();
+        System.out.print("Enter the value of c:");
+        int c=scn.nextInt();
+        int d=(b*b)-(4*a*c);
+        double root1;
+        double root2;
+        System.out.println("Discriminant"+d);
+        if(d>0)
+        {
+            root1=(-b+Math.sqrt(d))/(2*a);
+            root2=(-b-Math.sqrt(d))/(2*a);
+            System.out.println("Roots are real and distinct");
+            System.out.println(root1+" "+root2);
+        }
+        else if(d==0)
+        {
+            root1=root2=-b/(2*a);
+            System.out.println("Roots are real and equal");
+            System.out.println(root1+" "+root2);
+        }
+        else
+        {
+            System.out.println("No real roots exists");
+        }
+    }
+    
+}
